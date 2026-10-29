@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "BookerMediaTool"
+version = "2026.10.29.0"
+description = "DracoUnion 大模型媒体工具（小红书/公众号/播客/PPT/配图）"
+readme = "README.md"
+license = {text = "SATA"}
+authors = [
+    {name = "wizardforcel", email = "wizard.z@qq.com"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "License :: Other/Proprietary License",
+    "Natural Language :: Chinese (Simplified)",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Text Processing :: Markup :: HTML",
+    "Topic :: Utilities",
+]
+keywords = ["media", "媒体", "小红书", "公众号", "播客", "PPT", "配图"]
+requires-python = ">=3.6"
+dependencies = [
+    "openai",
+    "httpx",
+    "requests",
+    "pyyaml",
+    "pydantic",
+    "json_repair",
+    "pymupdf",
+    "pillow",
+    "pyturndown",
+    "ctx-compact",
+]
+
+[project.urls]
+Homepage = "https://github.com/DracoUnion/BookerMediaTool"
+
+[project.scripts]
+BookerMediaTool = "BookerMediaTool.__main__:main"
+media-tool = "BookerMediaTool.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["BookerMediaTool*"]
+
+[tool.setuptools.package-data]
+"*" = ["*"]

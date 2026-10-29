@@ -1,0 +1,13 @@
+openai
+httpx
+requests
+pyyaml
+pydantic
+json_repair
+pymupdf
+pillow
+pyturndown
+ctx-compact
+
+# art-img --png 导出需要（可选）
+playwright
