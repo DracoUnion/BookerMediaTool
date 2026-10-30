@@ -366,6 +366,5 @@ def reg_subparser(subparsers):
     parser.add_argument('input', help='文章 Markdown 文件路径')
     parser.add_argument('-o', '--output', help='输出 HTML 路径（默认：输入文件名-配图.html）')
     parser.add_argument('--png', action='store_true', help='用 Playwright 导出 PNG')
-    parser.add_argument('-D', '--debug', action='store_true', help='调试模式')
     parser.set_defaults(func=article_img_handle)
     return parser

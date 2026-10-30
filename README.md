@@ -76,12 +76,12 @@ media-tool --model gpt-4o-mini --retry 3 xhs-art article.md -o out
 | `-fp, --frequency-penalty` | 频率惩罚 | 无 |
 | `-pp, --presence-penalty` | 存在惩罚 | 无 |
 | `-mt, --max-tokens` | 最大输出 token 数 | 不限制 |
-| `-st, --stream` | 启用流式输出 | 关闭 |
+| `-ST, --no-stream` | 关闭流式输出 | 关闭 |
 | `-eb, --extra-body` | 额外请求体（JSON） | 无 |
 | `-ct, --conn-timeout` | 连接超时秒数 | `60` |
 | `-rt, --read-timeout` | 读取超时秒数 | `120` |
 | `-rr, --repetition-regex` | 重复检测正则 | 空 |
-| `-nt, --no-think` | 关闭思考模式 | 关闭 |
+| `-TN, --no-think` | 关闭思考模式 | 关闭 |
 | `-ua, --user-agent` | HTTP User-Agent 请求头 | `claude-cli/2.1.41` |
 
 ## 子命令

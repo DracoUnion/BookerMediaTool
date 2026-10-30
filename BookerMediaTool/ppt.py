@@ -114,5 +114,4 @@ def reg_subparser(subparsers):
     parser.add_argument('fname', help='素材文件或目录（markdown/文本，作为 PPT 内容来源）')
     parser.add_argument('-a', '--audience', default='', help='受众与分享场景')
     parser.add_argument('-t', '--duration', default='', help='分享时长（分钟）')
-    parser.add_argument("-D", "--debug", action='store_true', help="调试模式")
     parser.set_defaults(func=ppt)
