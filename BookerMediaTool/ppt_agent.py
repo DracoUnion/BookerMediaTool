@@ -70,8 +70,7 @@ class PptAgent:
 
     # ── 内部辅助 ──────────────────────────────────────
 
-    @staticmethod
-    def _json(schema: Type[BaseModel], prompt: str, args) -> BaseModel:
+    def _json(self, schema: Type[BaseModel], prompt: str, args) -> BaseModel:
         """调用 LLM 并把 ```json 代码块解析为 pydantic 对象。"""
         return self.llm.ask_chatgpt_retry(
             prompt, args.model, args,
@@ -80,8 +79,7 @@ class PptAgent:
             ),
         )
 
-    @staticmethod
-    def _text(prompt: str, args) -> str:
+    def _text(self, prompt: str, args) -> str:
         """调用 LLM 并提取 [content]...[/content] 中的正文。"""
         return self.llm.ask_chatgpt_retry(
             prompt, args.model, args,
