@@ -130,7 +130,7 @@ def xhs_art_handle(args):
 
 def reg_subparser(subparsers):
     parser = subparsers.add_parser(
-        'xhs-art-gen',
+        'xhs-art',
         help='文章 → 小红书轮播图 HTML + 发布文案 (LLM)',
     )
     parser.add_argument('input', help='文章 Markdown 文件路径')

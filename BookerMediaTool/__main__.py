@@ -3,7 +3,7 @@ import sys
 import os
 from . import __version__
 from . import (
-    xhs_img, xhs_art, xhs_vid, xhs_art_gen, xhs_img_gen, article_img, ppt, jike_art, podcast, gzh_art, zhanshimian,
+    article_img, ppt, jike_art, podcast, gzh_art, zhanshimian, xhs_art_gen, xhs_img_gen,
 )
 
 def main():
@@ -41,14 +41,11 @@ def main():
     parser.set_defaults(func=lambda x: parser.print_help())
     subparsers = parser.add_subparsers()
 
-    xhs_img.reg_subparser(subparsers)
     article_img.reg_subparser(subparsers)
     ppt.reg_subparser(subparsers)
-    xhs_art.reg_subparser(subparsers)
     jike_art.reg_subparser(subparsers)
     podcast.reg_subparser(subparsers)
     gzh_art.reg_subparser(subparsers)
-    xhs_vid.reg_subparser(subparsers)
     xhs_art_gen.reg_subparser(subparsers)
     xhs_img_gen.reg_subparser(subparsers)
     zhanshimian.reg_subparser(subparsers)

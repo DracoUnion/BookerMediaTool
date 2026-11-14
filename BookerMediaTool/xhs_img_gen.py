@@ -478,7 +478,7 @@ def xhs_img_handle(args):
 
 def reg_subparser(subparsers):
     """在 BookerGptTool 的 subparsers 中注册 xhs-img 子命令。"""
-    p = subparsers.add_parser("xhs-img-gen", help="小红书信息图卡片系列生成器")
+    p = subparsers.add_parser("xhs-img", help="小红书信息图卡片系列生成器")
     p.add_argument("input", help="输入文件路径，或 - 表示 stdin")
     p.add_argument("--style", choices=STYLE_NAMES, help="视觉风格")
     p.add_argument("--layout", choices=LAYOUT_NAMES, help="信息布局")
