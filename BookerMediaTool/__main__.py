@@ -3,7 +3,7 @@ import sys
 import os
 from . import __version__
 from . import (
-    xhs_img, xhs_art, xhs_vid, article_img, ppt, jike_art, podcast, gzh_art, zhanshimian,
+    xhs_img, xhs_art, xhs_vid, xhs_art_gen, xhs_img_gen, article_img, ppt, jike_art, podcast, gzh_art, zhanshimian,
 )
 
 def main():
@@ -49,6 +49,8 @@ def main():
     podcast.reg_subparser(subparsers)
     gzh_art.reg_subparser(subparsers)
     xhs_vid.reg_subparser(subparsers)
+    xhs_art_gen.reg_subparser(subparsers)
+    xhs_img_gen.reg_subparser(subparsers)
     zhanshimian.reg_subparser(subparsers)
 
     args = parser.parse_args()
