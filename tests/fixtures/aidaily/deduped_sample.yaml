@@ -1,0 +1,37 @@
+- id: d0000001
+  source: arxiv
+  url: https://arxiv.org/abs/2401.00001
+  title: "INT4 Quantization for LLMs on a Single 24G GPU"
+  summary: "We present a 4-bit quantization recipe that fits a 70B model on a single RTX 3090."
+  published_at: "2026-11-14 10:00:00"
+  lang: en
+  run_date: '2026-11-15'
+  is_primary: true
+  evidence_for: ""
+  evidence:
+    - source: arxiv
+      url: https://arxiv.org/abs/2401.00009
+      title: "INT4 Quantization for LLMs on a Single 24G GPU"
+      published_at: "2026-11-14 10:00:00"
+- id: d0000003
+  source: tds
+  url: https://towardsdatascience.com/hands-on-llama-colab
+  title: "Hands-on Fine-tuning Llama on Colab"
+  summary: "Low-cost fine-tuning with PEFT on Google Colab."
+  published_at: "2026-11-14 12:00:00"
+  lang: en
+  run_date: '2026-11-15'
+  is_primary: true
+  evidence_for: ""
+  evidence: []
+- id: d0000004
+  source: hn
+  url: https://github.com/ggerganov/llama.cpp
+  title: "llama.cpp 1.0 released"
+  summary: "Local inference on consumer hardware."
+  published_at: "2026-11-14 13:00:00"
+  lang: en
+  run_date: '2026-11-15'
+  is_primary: true
+  evidence_for: ""
+  evidence: []

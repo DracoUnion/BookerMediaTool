@@ -1,0 +1,68 @@
+- id: e0000001
+  source: arxiv
+  url: https://arxiv.org/abs/2401.00001
+  title: "INT4 Quantization for LLMs on a Single 24G GPU"
+  summary: "4-bit quantization on a single RTX 3090."
+  published_at: "2026-11-14 10:00:00"
+  lang: en
+  run_date: '2026-11-15'
+  is_primary: true
+  evidence_for: ""
+  evidence:
+    - source: hn
+      url: https://news.ycombinator.com/item?id=123
+      title: "HN discussion"
+      published_at: "2026-11-14 13:00:00"
+  enrichment:
+    relevance: 0.9
+    categories: [compression]
+    one_liner: 4位量化让 70B 模型跑在单卡 24G 上
+    resource_signal: consumer_24g
+- id: e0000002
+  source: arxiv
+  url: https://arxiv.org/abs/2401.00005
+  title: "Transformer Math on CPU"
+  summary: "Pure numpy transformer inference."
+  published_at: "2026-11-14 11:00:00"
+  lang: en
+  run_date: '2026-11-15'
+  is_primary: true
+  evidence_for: ""
+  evidence: []
+  enrichment:
+    relevance: 0.2
+    categories: [edge]
+    one_liner: CPU 也能推理 Transformer
+    resource_signal: cpu
+- id: e0000003
+  source: tds
+  url: https://towardsdatascience.com/colab-llama
+  title: "Fine-tuning Llama on Colab"
+  summary: "PEFT fine-tuning on free Colab GPU."
+  published_at: "2026-11-14 12:00:00"
+  lang: en
+  run_date: '2026-11-15'
+  is_primary: true
+  evidence_for: ""
+  evidence: []
+  enrichment:
+    relevance: 0.95
+    categories: [low_resource]
+    one_liner: 免费 Colab 即可微调
+    resource_signal: consumer_16g
+- id: e0000004
+  source: hn
+  url: https://github.com/some/irrelevant
+  title: "Unrelated GitHub repo"
+  summary: "Nothing about AI."
+  published_at: "2026-11-14 13:00:00"
+  lang: en
+  run_date: '2026-11-15'
+  is_primary: true
+  evidence_for: ""
+  evidence: []
+  enrichment:
+    relevance: 0.0
+    categories: []
+    one_liner: 无关
+    resource_signal: unspecified

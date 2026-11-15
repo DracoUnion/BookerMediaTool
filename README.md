@@ -175,6 +175,38 @@ media-tool zhanshimian face.jpg "a.jpg,b.jpg,c.jpg"
 media-tool zhanshimian face.jpg "*.png" --size 1024x1024 --model gpt-image-1
 ```
 
+### AI平权日报（aidaily）
+
+从固定信源（arXiv、Hacker News、Towards Data Science、新机器人、量子位）采集、粗筛、去重、LLM 精筛，最后渲染简报。四个主题：模型压缩（compression）、权重操控（weight_edit）、端侧与消费级推理（edge）、低资源训练（low_resource）。
+
+```bash
+# 完整流水线（默认 all，过去 24 小时）
+media-tool -m gpt-4o-mini -k "$OPENAI_API_KEY" -H https://api.openai.com/v1 aidaily \
+    --out-dir "$HOME/ai_daily_out"
+
+# 只跑某一阶段，或自定义日期窗口
+media-tool aidaily --stage collect --date 2026-11-15 --window-hours 24 --out-dir "$HOME/ai_daily_out"
+media-tool aidaily --stage render --date 2026-11-15 --out-dir "$HOME/ai_daily_out"
+media-tool aidaily --stage stats --date 2026-11-15 --out-dir "$HOME/ai_daily_out"
+```
+
+- 所有参数均有默认值，`media-tool aidaily --help` 通过 `ArgumentDefaultsHelpFormatter` 展示全部默认值。
+- 通用 LLM 参数（`-m/--model`、`-k/--key`、`-H/--host`、`-tm/--temp`、`-r/--retry`、`--emb`）由主解析器统一提供，请放在子命令之前；aidaily 自身新增 `--llm-max-concurrency`、`--llm-no-cache`、`--llm-max-tokens` 等。
+- 中间产物落在 `{out_dir}/{run_date}/`（raw/filtered/deduped/enriched/digest.md/digest.html/digest.json/run.json）；跨日索引和 LLM 缓存分别在 `{out_dir}/.index/` 与 `{out_dir}/.cache/enrich/`。手动删除 `.cache/enrich/` 即可重置 LLM 缓存。
+- 支持 `--stage` 单步重跑，幂等：同日期重复运行不产生重复简报，也不重复调用 LLM（命中缓存则跳过）。
+- crontab 示例（建议把密钥放在 crontab 文件顶部的 `OPENAI_API_KEY`，不要硬编码明文）：
+
+```bash
+0 8 * * * cd /path/to/repo && \
+  media-tool aidaily --stage all \
+    -m gpt-4o-mini -H https://api.openai.com/v1 \
+    -k "$OPENAI_API_KEY" \
+    --out-dir "$HOME/ai_daily_out" \
+    >> "$HOME/ai_daily_out/cron.log" 2>&1
+```
+
+- 退出码：0 成功；2 参数错误；3 部分信源失败但产物已生成；4 LLM 调用失败（可用 `--stage enrich --resume` 续跑）；5 锁冲突（并发运行时第二个立即退出）。
+
 ## 文件与输出说明
 
 - 需要文件路径的命令通常在输入文件旁边生成结果，具体输出位置以命令帮助或运行日志为准。

@@ -4,6 +4,7 @@ requests
 pyyaml
 pydantic
 json_repair
+feedparser
 pymupdf
 pillow
 pyturndown

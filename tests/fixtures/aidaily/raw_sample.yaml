@@ -1,0 +1,64 @@
+- id: a0000001
+  source: arxiv
+  url: https://arxiv.org/abs/2401.00001
+  title: "INT4 Quantization for LLMs on a Single 24G GPU"
+  summary: "We present a 4-bit quantization recipe that fits a 70B model on a single RTX 3090."
+  published_at: "2026-11-14 10:00:00"
+  lang: en
+  run_date: '2026-11-15'
+- id: a0000002
+  source: arxiv
+  url: https://arxiv.org/abs/2401.00002
+  title: "Quantum Error Correction for Surface Codes"
+  summary: "A theoretical study of quantum error correction thresholds."
+  published_at: "2026-11-14 11:00:00"
+  lang: en
+  run_date: '2026-11-15'
+- id: a0000003
+  source: tds
+  url: https://towardsdatascience.com/hands-on-llama-colab
+  title: "Hands-on Fine-tuning Llama on Colab"
+  summary: "Low-cost fine-tuning with PEFT on Google Colab."
+  published_at: "2026-11-14 12:00:00"
+  lang: en
+  run_date: '2026-11-15'
+- id: a0000004
+  source: hn
+  url: https://github.com/ggerganov/llama.cpp
+  title: "llama.cpp 1.0 released"
+  summary: "Local inference on consumer hardware."
+  published_at: "2026-11-14 13:00:00"
+  lang: en
+  run_date: '2026-11-15'
+- id: a0000005
+  source: hn
+  url: https://someblog.com/random-post
+  title: "My weekend project"
+  summary: "A random post unrelated to AI."
+  published_at: "2026-11-14 13:05:00"
+  lang: en
+  run_date: '2026-11-15'
+- id: a0000006
+  source: quantumbit
+  url: https://www.qbitai.com/2026/ceo-layoff
+  title: "某 AI 公司 CEO 裁员并新一轮融资"
+  summary: "公司新闻。"
+  published_at: "2026-11-14 14:00:00"
+  lang: zh
+  run_date: '2026-11-15'
+- id: a0000007
+  source: machine_heart
+  url: https://www.jiqizhixin.com/2026/consumer-gpu-llm
+  title: "消费级显卡本地运行大模型指南"
+  summary: "如何用一块 24G 显卡本地部署模型。"
+  published_at: "2026-11-14 15:00:00"
+  lang: zh
+  run_date: '2026-11-15'
+- id: a0000008
+  source: arxiv
+  url: https://arxiv.org/abs/2401.00009
+  title: "INT4 Quantization for LLMs on a Single 24G GPU"
+  summary: "We present a 4-bit quantization recipe that fits a 70B model on a single RTX 3090."
+  published_at: "2026-11-14 10:00:00"
+  lang: en
+  run_date: '2026-11-15'
