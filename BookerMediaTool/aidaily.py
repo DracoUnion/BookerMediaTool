@@ -310,7 +310,7 @@ class AidailyOrchestrator:
         unknown = [s for s in srcs if s not in KNOWN_SOURCES]
         if unknown:
             fail(f'未知信源：{", ".join(unknown)}（可用：{", ".join(KNOWN_SOURCES)}）')
-        if args.stage not in ALL_STAGES + ('stats',):
+        if args.stage not in ALL_STAGES + ('stats', 'all'):
             fail(f'--stage 必须是 {{"all", "collect", "filter", "dedup", "enrich", "render", "stats"}}')
 
     # ── 运行状态 ────────────────────────────────────────────────────
