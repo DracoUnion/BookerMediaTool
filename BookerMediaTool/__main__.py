@@ -4,6 +4,7 @@ import os
 from . import __version__
 from . import (
     article_img, ppt, jike_art, podcast, gzh_art, zhanshimian, xhs_art_gen, xhs_img_gen,
+    bili_ai_proj, zhihu_radar, wx_summary,
 )
 
 def main():
@@ -49,6 +50,10 @@ def main():
     xhs_art_gen.reg_subparser(subparsers)
     xhs_img_gen.reg_subparser(subparsers)
     zhanshimian.reg_subparser(subparsers)
+
+    bili_ai_proj.reg_subparser(subparsers)
+    zhihu_radar.reg_subparser(subparsers)
+    wx_summary.reg_subparser(subparsers)
 
     args = parser.parse_args()
     args.func(args)
